@@ -28,6 +28,11 @@ const config = {
       template: "index.html",
     }),
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/assets", to: "./assets" },
+      ],
+    }),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
