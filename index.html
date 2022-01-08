@@ -8,17 +8,106 @@
         <div class="reveal">
             <div class="slides">
               <section>
-                  <h1 id="main-title">Welcome to a short presentation about HTML5 Canvas!</h1>
+                  <h1 id="main-title">Welcome to a short presentation about HTML5 <span id="word-canvas">Canvas</span>!</h1>
                   <div id="canvas-picture">
                       <img src="./assets/picturePaint.jpg" alt="canvas picture">
-                      <div id="canvas-text">canvas</div>
+                      <div id="canvas-text"><span id="word-canvas">canvas</span></div>
                   </div>
                 </section>
                 <section>
-                    <section><h2 id="main-title">What is It a canvas?</h2></section>
-                    <section>Slide 2</section>
+                    <section><h2 id="main-title">What is It a <span id="word-canvas">Canvas</span>?</h2>
+                        <p id="paragraph"><span id="word-canvas">Canvas</span> standard-based HTML5 technologies that we can use to create  to draw graphics on a web page.</p>
+                    </section>
+                    <section><h2 id="main-title">How it works?</h2>
+                        <p id="paragraph">The <span id="word-canvas">Canvas</span> element provides scripts with a resolution-dependent bitmap <span id="word-canvas">Canvas</span>, which can be used for rendering graphs, game graphics, art, or other visual images on the fly.</p>
+                    </section>
+                    <section><h3 id="main-title">more details about <span id="word-canvas">Canvas</span>:</h3>
+                        <p id="paragraph">
+                            The canvas element is the actual DOM node embedded  in an HTML page. To use a <span id="word-canvas">canvas</span>, a <span id="word-canvas">canvas</span> context must be set.
+                        </p>
+                        <p id="paragraph">
+                            A <span id="word-canvas">canvas</span> context is an object with properties and methods that can be used to render graphics within the <span id="word-canvas">canvas</span> element.  The context can be 2d or webgl (3d).
+                        </p>       
+                        <p id="paragraph">
+                            Each <span id="word-canvas">canvas</span> element can have only one context.
+                        </p> 
+                    </section>
                 </section>
-              <section>Slide 2</section>
+                <section>
+                    <section><h2 id="main-title">some examples:</h2>
+                        <p id="paragraph">
+                            <div id="normal-text">
+                                A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+                            </div>
+                            <code id="code-text">
+                                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>canvas<span class="attributecolor" style="color:red"> id<span class="attributevaluecolor" style="color:mediumblue">="myCanvas"</span> width<span class="attributevaluecolor" style="color:mediumblue">="200"</span> height<span class="attributevaluecolor" style="color:mediumblue">="100"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+                            </code>
+                            <div id="normal-text">
+                                Here is an example of a basic, empty canvas:
+                            </div>
+                            <code id="code-text">     
+                                add style:  <span style="color:brown">style</span><span class="attributevaluecolor" style="color:mediumblue">="border:5px dotted #04f841f3;"</span>
+                            </code>
+                            <canvas id="exampleCanvas" width="200" height="100" style="border:5px dotted #04f841f3;">
+                            </canvas>
+                            <span id="word-canvas" style="transform: translateX(-168px) translateY(25px) rotate(-30deg); position: absolute;">Canvas</span>
+                        </p>
+                    </section>
+                    <section><h2 id="main-title">The <span id="word-canvas"><span><</span>canvas<span>></span></span> element is only a container</h2>
+                        <p id="paragraph">
+                            <div id="normal-text">
+                                After creating the rectangular canvas area, you must add a JavaScript to do the drawing.
+                            </div>
+                            <code id="code-text">
+                                <span class="jscolor" style="color:black"><span class="jsnumbercolor" style="color:red">
+                                </span>  &lt;script&gt;<br><span class="jskeywordcolor" style="color:mediumblue">var</span> c = document.<span class="jspropertycolor" style="color:black">getElementById</span>(<span class="jsstringcolor" style="color:brown">"myCanvas"</span>);<br><span class="jskeywordcolor" style="color:mediumblue">var</span> ctx = c.<span class="jspropertycolor" style="color:black">getContext</span>(<span class="jsstringcolor" style="color:brown">"2d"</span>);<br><span class="jsnumbercolor" style="color:red">
+                                </span> ctx.<span class="jspropertycolor" style="color:black">moveTo</span>(<span class="jsnumbercolor" style="color:red">0</span>, <span class="jsnumbercolor" style="color:red">0</span>);<br>ctx.<span class="jspropertycolor" style="color:black">lineTo</span>(<span class="jsnumbercolor" style="color:red">200</span>, <span class="jsnumbercolor" style="color:red">100</span>);<br><span class="jsnumbercolor" style="color:red">
+                                </span> ctx.<span class="jspropertycolor" style="color:black">stroke</span>();<br>&lt;/script&gt;</span>
+                            </code>
+                            <img src="./assets/line.png" alt="line" style="border:5px dotted #04f841f3;">
+                        </p>
+                    </section>
+                    <section>
+                            <code id="code-text">
+                                <span class="jscolor" style="color:black"><span class="jsnumbercolor" style="color:red">
+                                </span>  &lt;script&gt;<br><span class="jskeywordcolor" style="color:mediumblue">var</span> c = document.<span class="jspropertycolor" style="color:black">getElementById</span>(<span class="jsstringcolor" style="color:brown">"myCanvas"</span>);<br><span class="jskeywordcolor" style="color:mediumblue">var</span> ctx = c.<span class="jspropertycolor" style="color:black">getContext</span>(<span class="jsstringcolor" style="color:brown">"2d"</span>);<br><span class="jsnumbercolor" style="color:red">
+                                </span> ctx.<span class="jspropertycolor" style="color:black">beginPath</span>();<br>ctx.<span class="jspropertycolor" style="color:black">arc</span>(<span class="jsnumbercolor" style="color:red">95</span>, <span class="jsnumbercolor" style="color:red">50</span>, <span class="jsnumbercolor" style="color:red">40</span>, <span class="jsnumbercolor" style="color:red">0</span>, <span class="jsnumbercolor" style="color:red">2</span> * Math.<span class="jspropertycolor" style="color:black">PI</span>);<br>ctx.<span class="jspropertycolor" style="color:black">stroke</span>();<br><span class="jsnumbercolor" style="color:red">
+                                </span>  &lt;/script&gt; </span>
+                            </code>
+                            <img src="./assets/circle.png" alt="circle" style="border:5px dotted #04f841f3;">
+                        </p>
+                    </section> 
+                </section>
+              <section>
+                <section>
+                    <h2 id="main-title">What <span id="word-canvas">Canvas</span> is best for?</h2>
+                </section>
+                <section>
+                    <h2 id="main-title">Games and Generative Art</h2>
+                    <div id="normal-text">
+                        For graphics-intensive, highly interactive games, as well as for generative art, Canvas is generally the way to go.
+                    </div>
+                </section>
+                <section>
+                    <h2 id="main-title">Drawing a Significant Number of Objects on a Small Surface</h2>
+                    <div id="normal-text">
+                        such as non-interactive real-time data visualizations like graphical representations of weather patterns.
+                    </div>
+                    <img style="margin-top: 50px;" width="500" height="auto" src="./assets/canvas-data-visualization.webp" alt="whether" style="border:5px dotted #04f841f3;">
+                </section>
+                <section>
+                    <h2 id="main-title">Pixel Replacement in Videos</h2>
+                    <div id="normal-text">
+                        another example where <span id="word-canvas">Canvas</span> would be appropriate is when replacing a video background color with a different color, another scene, or image
+                    </div>
+                    <img style="margin-top: 50px;" width="500" height="auto" src="./assets/video-pixel-replacement.webp" alt="video-pixel" style="border:5px dotted #04f841f3;">
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2 id="main-title">What isn't a <span id="word-canvas">Canvas</span> good for?</h2>
+                </section>
+            </section>
             </div>
           </div>
     </body>
